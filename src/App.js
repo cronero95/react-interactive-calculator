@@ -3,8 +3,16 @@ import freeCodeCampLogo from './images/freecodecamp-logo.png'
 import Button from './components/Button';
 import Screen from './components/Screen';
 import ClearButton from './components/ClearButton';
+import { useState } from 'react';
 
 function App() {
+
+  const [userInput, setUserInput] = useState('');
+
+  const addInput = (value) => {
+    setUserInput(userInput+value);
+  };
+
   return (
     <div className="App">
       <div className='freecodecamp-logo-wrapper'>
@@ -15,33 +23,37 @@ function App() {
         />
       </div>
       <div className='calculator-wrapper'>
-        <Screen />
+        <Screen 
+          input={userInput}
+        />
         <div className='buttons-row'>
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button>+</Button>
+          <Button clickManagement = {addInput}>1</Button>
+          <Button clickManagement = {addInput}>2</Button>
+          <Button clickManagement = {addInput}>3</Button>
+          <Button clickManagement = {addInput}>+</Button>
         </div>
         <div className='buttons-row'>
-          <Button>4</Button>
-          <Button>5</Button>
-          <Button>6</Button>
-          <Button>-</Button>
+          <Button clickManagement = {addInput}>4</Button>
+          <Button clickManagement = {addInput}>5</Button>
+          <Button clickManagement = {addInput}>6</Button>
+          <Button clickManagement = {addInput}>-</Button>
         </div>
         <div className='buttons-row'>
-          <Button>7</Button>
-          <Button>8</Button>
-          <Button>9</Button>
-          <Button>*</Button>
+          <Button clickManagement = {addInput}>7</Button>
+          <Button clickManagement = {addInput}>8</Button>
+          <Button clickManagement = {addInput}>9</Button>
+          <Button clickManagement = {addInput}>*</Button>
         </div>
         <div className='buttons-row'>
-          <Button>=</Button>
-          <Button>0</Button>
-          <Button>.</Button>
-          <Button>/</Button>
+          <Button clickManagement = {addInput}>=</Button>
+          <Button clickManagement = {addInput}>0</Button>
+          <Button clickManagement = {addInput}>.</Button>
+          <Button clickManagement = {addInput}>/</Button>
         </div>
         <div className='buttons-row'>
-          <ClearButton />
+          <ClearButton 
+            clearManagement = {() => setUserInput('')}
+          />
         </div>
       </div>
     </div>

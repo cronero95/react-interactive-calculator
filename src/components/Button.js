@@ -9,7 +9,9 @@ function Button(props) {
 
   return (
     <div 
-      className={`button-wrapper ${isOperator(props.children) ? 'operator' : ''}`.trimEnd()}>
+      className={`button-wrapper ${isOperator(props.children) ? 'operator' : ''}`.trimEnd()}
+      onClick={() => props.clickManagement(props.children)}
+    >
       {props.children}
     </div>
   );
