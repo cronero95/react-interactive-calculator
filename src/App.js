@@ -12,7 +12,11 @@ function App() {
         />
       </div>
       <div className='calculator-wrapper'>
-        
+        <div className='buttons-row'></div>
+        <div className='buttons-row'></div>
+        <div className='buttons-row'></div>
+        <div className='buttons-row'></div>
+        <div className='buttons-row'></div>
       </div>
     </div>
   );
