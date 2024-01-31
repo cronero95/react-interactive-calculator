@@ -1,5 +1,5 @@
 .button-wrapper {
-  height: 60px;
+  height: 65px;
   display: flex;
   flex: 1 1;
   align-items: center;
@@ -8,13 +8,21 @@
   font-size: 38px;
   background-color: #1b1b32;
   color: white;
-  border-radius: 25px;
+  border-radius: 15px;
   border: 2px solid white;
   margin: 4px;
   cursor: pointer;
   user-select: none;
 }
 
+.button-wrapper:hover {
+  background-color: #5a01a7;
+}
+
 .operator {
   background-color: #00471b;
+}
+
+.operator:hover {
+  background-color: #ff6600;
 }
