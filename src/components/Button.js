@@ -8,12 +8,12 @@ function Button(props) {
   };
 
   return (
-    <div 
+    <button 
       className={`button-wrapper ${isOperator(props.children) ? 'operator' : ''}`.trimEnd()}
       onClick={() => props.clickManagement(props.children)}
     >
       {props.children}
-    </div>
+    </button>
   );
 }
 

@@ -15,7 +15,11 @@ function App() {
   };
 
   const calculateResult = () => {
-    setUserInput(evaluate(userInput));
+    if (userInput) {
+      setUserInput(evaluate(userInput));
+    } else {
+      alert('Please, enter data before pressing the equal button');
+    }
   };
 
   return (

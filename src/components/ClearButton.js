@@ -2,12 +2,12 @@ import React from 'react';
 import '../style-sheets/ClearButton.css'
 
 const ClearButton = (props) => (
-  <div 
+  <button 
     className='clear-button'
     onClick={props.clearManagement}
   >
     Clear
-  </div>
+  </button>
 );
 
 export default ClearButton;
